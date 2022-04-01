@@ -242,7 +242,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &315648857
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -513,7 +513,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 315648855}
   summonDistThreshhold: 10
-  spawnObject: {fileID: 2901072223091644519, guid: 12955e3046eef5146a09ee26c21d7d2e, type: 3}
+  spawnObject: {fileID: 3486571095020887260, guid: 20c04b024a0c511468e2fbbe543a4298, type: 3}
   maxSpawned: 1
   currentlyActive: 0
   spawnThreshhold: 0
