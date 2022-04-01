@@ -28,4 +28,9 @@ public class CameraFollow: MonoBehaviour
 
         transform.position = new Vector3(newX, newY, transform.position.z);
     }
+
+    public void PushCameraBack(float scaleIncrease)
+    {
+        GetComponent<Camera>().orthographicSize += scaleIncrease;
+    }
 }

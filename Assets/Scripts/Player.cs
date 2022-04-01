@@ -6,11 +6,10 @@ public class Player : MonoBehaviour
 {
     [SerializeField]
     private float slimeSpeed;
-    private CharacterController cc;
+
     // Start is called before the first frame update
     void Start()
     {
-        cc = GetComponent<CharacterController>();
     }
 
     // Update is called once per frame
@@ -23,13 +22,22 @@ public class Player : MonoBehaviour
     {
         float xMove = Input.GetAxis("Horizontal");
         float yMove = Input.GetAxis("Vertical");
-        Vector2 move = new Vector2(xMove, 0);
 
-        if(yMove != 0.0f)
+        Vector3 move = new Vector3(xMove, 0, 0);
+
+        if (xMove == 0.0f) move = new Vector3(0, yMove, 0);
+
+        transform.position += move * Time.deltaTime * slimeSpeed;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.transform.CompareTag("Item"))
         {
-            move = new Vector2(0, yMove);
+            ItemAttributes iA = collision.gameObject.GetComponent<ItemAttributes>();
+            Destroy(collision.gameObject);
+            transform.localScale += new Vector3(iA.PlayerScaleIncrease, iA.PlayerScaleIncrease, 0);
+            FindObjectOfType<CameraFollow>().PushCameraBack(iA.CameraScaleIncrease);
         }
-
-        cc.Move(move * Time.deltaTime * slimeSpeed);
     }
 }
