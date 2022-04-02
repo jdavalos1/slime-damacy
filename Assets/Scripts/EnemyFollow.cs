@@ -16,6 +16,8 @@ public class EnemyFollow : MonoBehaviour
     private float movementTime;
     [SerializeField]
     private float pauseDuration;
+    [SerializeField]
+    private float XThreshhold;
 
     private Animator enemyAnimator;
     private Coroutine moveCoroutine;
@@ -35,9 +37,7 @@ public class EnemyFollow : MonoBehaviour
     {
         if (Vector3.Distance(player.position, transform.position) <= distThreshhold)
         {
-            StopCoroutine(moveCoroutine);
-            StopAnimation();
-            Debug.Log("Grr");
+            FollowPlayer();
         }
         else
         {
@@ -45,6 +45,25 @@ public class EnemyFollow : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Follow the player if they are close enough
+    /// </summary>
+    private void FollowPlayer()
+    {
+        if (isMoving)
+        {
+            StopCoroutine(moveCoroutine);
+            isMoving = false;
+        }
+        StopAnimation();
+        transform.position = Vector3.MoveTowards(transform.position, player.position, enemyMoveSpeed * Time.deltaTime);
+        // Just want a way to determine the direction of the animation
+        SetAnimation((player.position - transform.position).normalized);
+    }
+
+    /// <summary>
+    /// Move in random direction if the player can't be seen
+    /// </summary>
     private void MoveRandom()
     {
         if (!isMoving)
@@ -55,9 +74,6 @@ public class EnemyFollow : MonoBehaviour
         }
     }
 
-    private void MoveTowards()
-    {
-    }
 
     /// <summary>
     /// Move the player in a direction
@@ -67,30 +83,8 @@ public class EnemyFollow : MonoBehaviour
     private IEnumerator Move(Vector2 dirMask)
     {
         StopAnimation();
+        SetAnimation(dirMask);
         // Handle the animation direction
-        if (dirMask.x > 0.0f)
-        {
-            enemyAnimator.SetBool("RightMove_b", true);
-            currentMove = Movement.Right;
-        }
-        else if (dirMask.x < 0.0f)
-        {
-            enemyAnimator.SetBool("LeftMove_b", true);
-            currentMove = Movement.Left;
-        }
-        else
-        {
-            if (dirMask.y > 0.0f)
-            {
-                enemyAnimator.SetBool("UpMove_b", true);
-                currentMove = Movement.Up;
-            }
-            else if (dirMask.y < 0.0f)
-            {
-                enemyAnimator.SetBool("DownMove_b", true);
-                currentMove = Movement.Down;
-            }
-        }
 
         Vector3 startPos = transform.position;
         Vector3 randomLocation = new Vector3(
@@ -100,8 +94,8 @@ public class EnemyFollow : MonoBehaviour
 
         Vector3 endPos = randomLocation + startPos;
         float elapseTime = 0f;
-        Debug.Log(endPos);
 
+        // Allow enemy to move over time
         while(elapseTime < movementTime)
         {
             elapseTime += Time.deltaTime;
@@ -109,12 +103,46 @@ public class EnemyFollow : MonoBehaviour
             yield return null;
         }
 
+        // Pause the animation since there won't be anymore movement
         StopAnimation();
+
+        // Wait in order to create a realistic movement
         yield return new WaitForSeconds(pauseDuration);
 
         isMoving = false;
     }
 
+    public void SetAnimation(Vector2 dir)
+    {
+        // Handle the animation direction
+        if (dir.x > XThreshhold)
+        {
+            enemyAnimator.SetBool("RightMove_b", true);
+            currentMove = Movement.Right;
+        }
+        else if (dir.x < -XThreshhold)
+        {
+            enemyAnimator.SetBool("LeftMove_b", true);
+            currentMove = Movement.Left;
+        }
+        else
+        {
+            if (dir.y > 0.0f)
+            {
+                enemyAnimator.SetBool("UpMove_b", true);
+                currentMove = Movement.Up;
+            }
+            else if (dir.y < 0.0f)
+            {
+                enemyAnimator.SetBool("DownMove_b", true);
+                currentMove = Movement.Down;
+            }
+        }
+    }
+
+    /// <summary>
+    /// Stop the animation by setting it to false
+    /// </summary>
     void StopAnimation()
     {
         switch (currentMove)
