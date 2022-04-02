@@ -90,7 +90,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 9d1740c30b9fc304783eecdb1cc090d0, type: 2}
+  m_Motion: {fileID: 7400000, guid: f8f1d32ee30e9e14bb7a3507e6e362e9, type: 2}
   m_Tag: 
   m_SpeedParameter: Speed_f
   m_MirrorParameter: 
@@ -142,7 +142,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 60931620643744c4dbf772d492271d38, type: 2}
+  m_Motion: {fileID: 7400000, guid: 3e58b8b07fde5944a9d0cd60e088f16b, type: 2}
   m_Tag: 
   m_SpeedParameter: Speed_f
   m_MirrorParameter: 
@@ -165,7 +165,7 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0
+  m_TransitionDuration: 0.25
   m_TransitionOffset: 0
   m_ExitTime: 0
   m_HasExitTime: 0
@@ -357,7 +357,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Player
+  m_Name: Small Red
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Speed_f
@@ -420,9 +420,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0
-  m_TransitionOffset: 0.0012085742
-  m_ExitTime: 0.74999976
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.75
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -495,10 +495,10 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0
+  m_TransitionDuration: 0.25
   m_TransitionOffset: 0
   m_ExitTime: 0
-  m_HasExitTime: 0
+  m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -600,7 +600,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: e6672e54cfd0823498b64383b843ec09, type: 2}
+  m_Motion: {fileID: 7400000, guid: 149d8493be5deef4b9ddc15ae1bfb4cc, type: 2}
   m_Tag: 
   m_SpeedParameter: Speed_f
   m_MirrorParameter: 
@@ -628,7 +628,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 6c785eab9eef83b4388cd4a007976680, type: 2}
+  m_Motion: {fileID: 7400000, guid: 54ab1390360845349b62e514c03aa898, type: 2}
   m_Tag: 
   m_SpeedParameter: Speed_f
   m_MirrorParameter: 
@@ -658,7 +658,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: c5f5e1eaf1fc77f43a40bdf33e452341, type: 2}
+  m_Motion: {fileID: 7400000, guid: eceaac0c207dc704489b504d4e0c36fe, type: 2}
   m_Tag: 
   m_SpeedParameter: Speed_f
   m_MirrorParameter: 
@@ -802,8 +802,8 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0
-  m_TransitionOffset: 0.19654697
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
   m_ExitTime: 0
   m_HasExitTime: 0
   m_HasFixedDuration: 1
@@ -834,7 +834,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 110f7bfa5e0c1234a92ae70e78a25b03, type: 2}
+  m_Motion: {fileID: 7400000, guid: 94f03fe69de83e044bc2dc0ee860eaae, type: 2}
   m_Tag: 
   m_SpeedParameter: Speed_f
   m_MirrorParameter: 
@@ -864,7 +864,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 96f883fa5f187224b88bf96a307b6cf8, type: 2}
+  m_Motion: {fileID: 7400000, guid: ae16c49ad36bbc14291f3f840699554a, type: 2}
   m_Tag: 
   m_SpeedParameter: Speed_f
   m_MirrorParameter: 
@@ -894,7 +894,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: ffc61f7db9a26a14aa42f81c9c288075, type: 2}
+  m_Motion: {fileID: 7400000, guid: 6d0761480e5580445858c814419a0c80, type: 2}
   m_Tag: 
   m_SpeedParameter: Speed_f
   m_MirrorParameter: 
