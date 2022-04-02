@@ -5,8 +5,6 @@ using UnityEngine;
 public class EnemyFollow : MonoBehaviour
 {
     [SerializeField]
-    private Transform player;
-    [SerializeField]
     private Vector2 maxDistMove;
     [SerializeField]
     private float distThreshhold;
@@ -21,6 +19,7 @@ public class EnemyFollow : MonoBehaviour
 
     private Animator enemyAnimator;
     private Coroutine moveCoroutine;
+    private Transform player;
     private Movement currentMove;
     private bool isMoving;
 
@@ -30,6 +29,7 @@ public class EnemyFollow : MonoBehaviour
         isMoving = false;
         currentMove = Movement.Down;
         enemyAnimator = GetComponent<Animator>();
+        player = FindObjectOfType<Player>().transform;
     }
 
     // Update is called once per frame

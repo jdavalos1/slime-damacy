@@ -30,6 +30,6 @@ public class ItemAttributes : MonoBehaviour
     public void RemoveSpawn()
     {
         transform.gameObject.SetActive(false);
-        //spawnOwner.currentlyActive--;
+        spawnOwner.currentlyActive--;
     }
 }

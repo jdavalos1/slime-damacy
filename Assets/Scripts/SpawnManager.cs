@@ -5,14 +5,13 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     [SerializeField]
-    private Transform player;
+    private int maxSpawned;
     [SerializeField]
     private float summonDistThreshhold;
-
     [SerializeField]
     private GameObject spawnObject;
     [SerializeField]
-    private int maxSpawned;
+    private Transform player;
 
     public int currentlyActive;
     [SerializeField]
@@ -53,6 +52,7 @@ public class SpawnManager : MonoBehaviour
             currentlyActive++;
             GameObject spawn = spawnObjects.Find(s => !s.activeInHierarchy);
             spawn.SetActive(true);
+            spawn.transform.position = GetRandomPosition();
         }
 
     }
