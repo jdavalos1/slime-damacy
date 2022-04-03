@@ -59,13 +59,21 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.transform.CompareTag("Item"))
+        ScaleSize(collision);
+        if (collision.transform.CompareTag("Enemy"))
         {
-            ItemAttributes iA = collision.gameObject.GetComponent<ItemAttributes>();
-            transform.localScale += new Vector3(iA.PlayerScaleIncrease, iA.PlayerScaleIncrease, 0);
-            FindObjectOfType<CameraFollow>().PushCameraBack(iA.CameraScaleIncrease);
-            iA.RemoveSpawn();
+            collision.gameObject.GetComponent<EnemyFollow>().RemoveSpawn();
         }
+
+        GameManager.SharedInstance.CheckSize();
+    }
+
+    private void ScaleSize(Collision2D collision)
+    {
+        if (collision == null) return;
+        ItemAttributes iA = collision.gameObject.GetComponent<ItemAttributes>();
+        transform.localScale += new Vector3(iA.PlayerScaleIncrease, iA.PlayerScaleIncrease, 0);
+        FindObjectOfType<CameraFollow>().PushCameraBack(iA.CameraScaleIncrease);
     }
 
     private void StopDirection()

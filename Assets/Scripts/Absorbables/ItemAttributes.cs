@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ItemAttributes : MonoBehaviour
 {
-    public SpawnManager spawnOwner;
     [SerializeField]
     private float _playerScaleIncrease;
 
@@ -25,11 +24,5 @@ public class ItemAttributes : MonoBehaviour
     {
         PlayerScaleIncrease = _playerScaleIncrease;
         CameraScaleIncrease = _cameraScaleIncrease;
-    }
-
-    public void RemoveSpawn()
-    {
-        transform.gameObject.SetActive(false);
-        spawnOwner.currentlyActive--;
     }
 }
