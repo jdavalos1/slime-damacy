@@ -4,18 +4,43 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
+    public int currentlyActive;
+
+    /// <summary>
+    /// Objects to pool
+    /// </summary>
     [SerializeField]
-    private int maxSpawned;
+    private int maxPooled;
+
+    /// <summary>
+    /// Minimum distance before a summon is placed
+    /// </summary>
     [SerializeField]
     private float summonDistThreshhold;
+
+    /// <summary>
+    /// Object to spawn
+    /// </summary>
     [SerializeField]
     private GameObject spawnObject;
+
+    /// <summary>
+    /// Player transform
+    /// </summary>
     [SerializeField]
     private Transform player;
 
-    public int currentlyActive;
+    /// <summary>
+    /// Max number of active spawns on the field
+    /// </summary>
     [SerializeField]
-    private int spawnThreshhold;
+    private int maxSpawn;
+
+    /// <summary>
+    /// Spawn limits from the actual spawn manager
+    /// </summary>
+    [SerializeField]
+    private Vector2 spawnLimits;
 
     private List<GameObject> spawnObjects;
     // Start is called before the first frame update
@@ -25,7 +50,7 @@ public class SpawnManager : MonoBehaviour
         spawnObjects = new List<GameObject>();
         GameObject temp;
 
-        for(int i = 0; i < maxSpawned; i++)
+        for(int i = 0; i < maxPooled; i++)
         {
             temp = Instantiate(spawnObject);
             temp.SetActive(false);
@@ -47,18 +72,20 @@ public class SpawnManager : MonoBehaviour
 
     public void SummonSpawn()
     {
-        if(currentlyActive <= spawnThreshhold)
+        if(currentlyActive < maxSpawn)
         {
             currentlyActive++;
             GameObject spawn = spawnObjects.Find(s => !s.activeInHierarchy);
             spawn.SetActive(true);
-            spawn.transform.position = GetRandomPosition();
+            spawn.transform.position = GetRandomPosition() + transform.position;
         }
 
     }
 
     private Vector3 GetRandomPosition()
     {
-        return new Vector3();
+        return new Vector3(Random.Range(-spawnLimits.x, spawnLimits.x),
+                           Random.Range(-spawnLimits.y, spawnLimits.y),
+                           -0.1f);
     }
 }

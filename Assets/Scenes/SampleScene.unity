@@ -381,7 +381,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 790048519}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.1, y: 19.45, z: -0.49660176}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -399,12 +399,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4e8f802a1f7b7342bf5914e16ca4e8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpawned: 1
-  summonDistThreshhold: 15
-  spawnObject: {fileID: 3486571095020887260, guid: 20c04b024a0c511468e2fbbe543a4298, type: 3}
-  player: {fileID: 315648855}
   currentlyActive: 0
-  spawnThreshhold: 0
+  maxPooled: 2
+  summonDistThreshhold: 15
+  spawnObject: {fileID: 1330354615934631971, guid: 12db2c4a134961248bb0e29791a963b4, type: 3}
+  player: {fileID: 315648855}
+  maxSpawn: 1
+  spawnLimits: {x: 5, y: 5}
 --- !u!1 &847674925
 GameObject:
   m_ObjectHideFlags: 0
