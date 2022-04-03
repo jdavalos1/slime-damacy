@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5793449688504753078}
   m_Layer: 0
   m_Name: Big Yellow Enemy
-  m_TagString: Item
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -117,7 +117,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96681895a8c990c4587855a9b560d95c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnOwner: {fileID: 0}
   _playerScaleIncrease: 1
   _cameraScaleIncrease: 1
 --- !u!61 &7879366417578853135
@@ -164,3 +163,4 @@ MonoBehaviour:
   movementTime: 0
   pauseDuration: 0
   XThreshhold: 0
+  spawnOwner: {fileID: 0}
