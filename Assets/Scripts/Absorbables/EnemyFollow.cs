@@ -23,6 +23,8 @@ public class EnemyFollow : MonoBehaviour
     private Movement currentMove;
     private bool isMoving;
 
+    public SpawnManager spawnOwner;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -162,6 +164,11 @@ public class EnemyFollow : MonoBehaviour
         }
     }
 
+    public void RemoveSpawn()
+    {
+        transform.gameObject.SetActive(false);
+        spawnOwner.currentlyActive--;
+    }
     enum Movement
     {
         Up,
