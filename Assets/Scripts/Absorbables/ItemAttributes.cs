@@ -20,6 +20,11 @@ public class ItemAttributes : MonoBehaviour
     /// </summary>
     public float CameraScaleIncrease { get; private set; }
 
+    /// <summary>
+    /// Scale of item used to check the item versus the player in order to absorb
+    /// </summary>
+    public Vector2 itemScale;
+
     void Start()
     {
         PlayerScaleIncrease = _playerScaleIncrease;

@@ -4,16 +4,46 @@ using UnityEngine;
 
 public class EnemyFollow : MonoBehaviour
 {
+    /// <summary>
+    /// Force when colliding with the enemy
+    /// </summary>
+    public Vector2 enemyForce;
+
+    /// <summary>
+    /// Max distance to move the enemy
+    /// </summary>
     [SerializeField]
     private Vector2 maxDistMove;
+   
+    /// <summary>
+    /// Distance threshhold to follow player
+    /// </summary>
     [SerializeField]
     private float distThreshhold;
+    
+    /// <summary>
+    /// Speed at which the enemy follows the player
+    /// </summary>
     [SerializeField]
     private float enemyMoveSpeed;
+
+    public float EnemyMoveSpeed { get {return enemyMoveSpeed; } }
+
+    /// <summary>
+    /// Max time to move from to a random position
+    /// </summary>
     [SerializeField]
     private float movementTime;
+
+    /// <summary>
+    /// Duration of wait between movement
+    /// </summary>
     [SerializeField]
     private float pauseDuration;
+
+    /// <summary>
+    /// Threshhold before animation changes to 
+    /// </summary>
     [SerializeField]
     private float XThreshhold;
 
@@ -46,7 +76,7 @@ public class EnemyFollow : MonoBehaviour
             MoveRandom();
         }
     }
-
+    
     /// <summary>
     /// Follow the player if they are close enough
     /// </summary>
@@ -114,6 +144,10 @@ public class EnemyFollow : MonoBehaviour
         isMoving = false;
     }
 
+    /// <summary>
+    /// Sets the animation of the enemy as it follows the player
+    /// </summary>
+    /// <param name="dir"></param>
     public void SetAnimation(Vector2 dir)
     {
         // Handle the animation direction
@@ -164,6 +198,15 @@ public class EnemyFollow : MonoBehaviour
         }
     }
 
+    public Vector3 DirectionFacing()
+    {
+        Vector3 towardsPlayer = Vector3.MoveTowards(transform.position, player.position, enemyMoveSpeed * Time.deltaTime);
+        return towardsPlayer.normalized;
+    }
+
+    /// <summary>
+    /// Removes the spawn from the game
+    /// </summary>
     public void RemoveSpawn()
     {
         transform.gameObject.SetActive(false);

@@ -25,7 +25,10 @@ public class GameManager : MonoBehaviour
         audioManager = FindObjectOfType<AudioManager>();
         audioManager.Play("BGM-1", true);
     }
-    
+
+    /// <summary>
+    /// Check the size of the player and if its gotten bigger than the max size
+    /// </summary>
     public void CheckSize()
     {
         if (player.lossyScale.x >= maxPlayerSize && player.lossyScale.y >= maxPlayerSize) Debug.Log("Winner winner chicken dinner");

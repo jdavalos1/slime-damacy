@@ -117,8 +117,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96681895a8c990c4587855a9b560d95c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerScaleIncrease: 1
-  _cameraScaleIncrease: 1
+  _playerScaleIncrease: 0.2
+  _cameraScaleIncrease: 0.1
+  itemScale: {x: 0, y: 0}
 --- !u!61 &2949228332505577388
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -157,10 +158,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 150a72c0024225a42a5db53390b6dc7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDistMove: {x: 0, y: 0}
-  distThreshhold: 0
-  enemyMoveSpeed: 0
-  movementTime: 0
-  pauseDuration: 0
-  XThreshhold: 0
+  enemyForce: {x: 0, y: 0}
+  maxDistMove: {x: 5, y: 5}
+  distThreshhold: 15
+  enemyMoveSpeed: 3
+  movementTime: 4
+  pauseDuration: 2
+  XThreshhold: 0.2
   spawnOwner: {fileID: 0}

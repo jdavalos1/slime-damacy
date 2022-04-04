@@ -59,10 +59,36 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        ScaleSize(collision);
+        ItemAttributes iA = collision.gameObject.GetComponent<ItemAttributes>();
         if (collision.transform.CompareTag("Enemy"))
         {
-            collision.gameObject.GetComponent<EnemyFollow>().RemoveSpawn();
+            // Determine what gets happens when an enemy is of different size 
+            if(iA.itemScale.x > transform.lossyScale.x)
+            {
+                //GameManager.SharedInstance.isGameOver = true;
+                Debug.Log("DEAD");
+            }
+            else if(iA.itemScale.x <= transform.lossyScale.x)
+            {
+                ScaleSize(collision);
+                collision.gameObject.GetComponent<EnemyFollow>().RemoveSpawn();
+            }
+            /*else
+            {
+                EnemyFollow ef = iA.gameObject.GetComponent<EnemyFollow>();
+                Vector3 resultingForce = ef.enemyForce * ef.DirectionFacing();
+
+                transform.GetComponent<Rigidbody2D>()
+                    .AddForce(resultingForce, ForceMode2D.Impulse);
+            }*/
+        }
+        else if (collision.transform.CompareTag("Item"))
+        {
+            if(iA.itemScale.x <= transform.lossyScale.x || iA.itemScale.y <= transform.lossyScale.y)
+            {
+                ScaleSize(collision);
+            }
+            collision.gameObject.SetActive(false);
         }
 
         GameManager.SharedInstance.CheckSize();
@@ -76,6 +102,9 @@ public class Player : MonoBehaviour
         FindObjectOfType<CameraFollow>().PushCameraBack(iA.CameraScaleIncrease);
     }
 
+    /// <summary>
+    /// Stops the current direction of the animation
+    /// </summary>
     private void StopDirection()
     {
         switch (currentDirection)

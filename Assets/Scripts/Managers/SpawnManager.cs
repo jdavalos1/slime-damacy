@@ -42,6 +42,12 @@ public class SpawnManager : MonoBehaviour
     [SerializeField]
     private Vector2 spawnLimits;
 
+    /// <summary>
+    /// Scale difference between self and player
+    /// </summary>
+    [SerializeField]
+    private Vector3 spawnScale;
+
     private List<GameObject> spawnObjects;
     // Start is called before the first frame update
     void Start()
@@ -66,7 +72,20 @@ public class SpawnManager : MonoBehaviour
     {
         if(Vector3.Distance(transform.position, player.position) <= summonDistThreshhold)
         {
+            UpdateSpawnScale();
             SummonSpawn();
+        }
+    }
+
+    private void UpdateSpawnScale()
+    {
+        foreach(var spawn in spawnObjects)
+        {
+            if (!spawn.activeSelf)
+            {
+                spawn.transform.localScale = player.localScale + spawnScale;
+                spawn.GetComponent<ItemAttributes>().itemScale = player.localScale + spawnScale;
+            }
         }
     }
 
