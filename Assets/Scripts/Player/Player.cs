@@ -126,11 +126,18 @@ public class Player : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Start the death of the enemy
+    /// </summary>
     public void StartDeath()
     {
         StartCoroutine(Shrink());
     }
 
+    /// <summary>
+    /// Shrink the player over time
+    /// </summary>
+    /// <returns></returns>
     public IEnumerator Shrink()
     {
         GameManager.SharedInstance.isGameOver = true;
