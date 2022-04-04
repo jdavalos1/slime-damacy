@@ -161,7 +161,7 @@ MonoBehaviour:
   enemyForce: {x: 0, y: 0}
   maxDistMove: {x: 2, y: 2}
   distThreshhold: 5
-  enemyMoveSpeed: 2
+  enemyMoveSpeed: 1
   movementTime: 6
   pauseDuration: 3
   XThreshhold: 0.2

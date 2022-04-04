@@ -67,16 +67,14 @@ public class EnemyFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!GameManager.SharedInstance.isGameOver)
+        if (!GameManager.SharedInstance.isGameOver && Vector3.Distance(player.position, transform.position) <= distThreshhold)
         {
-            if (Vector3.Distance(player.position, transform.position) <= distThreshhold)
-            {
-                FollowPlayer();
-            }
-            else
-            {
-                MoveRandom();
-            }
+            FollowPlayer();
+        }
+        else
+        {
+            Debug.Log(GameManager.SharedInstance.isGameOver);
+            MoveRandom();
         }
     }
     

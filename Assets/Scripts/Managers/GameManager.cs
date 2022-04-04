@@ -17,13 +17,13 @@ public class GameManager : MonoBehaviour
     {
         SharedInstance = this;
         DontDestroyOnLoad(this);
-        isGameOver = true;
+        isGameOver = false;
     }
     // Start is called before the first frame update
     void Start()
     {
         audioManager = FindObjectOfType<AudioManager>();
-        audioManager.Play("BGM-1", true);
+        audioManager.Play("BGM", true);
     }
 
     /// <summary>

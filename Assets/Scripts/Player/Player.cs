@@ -67,7 +67,8 @@ public class Player : MonoBehaviour
             {
                 //GameManager.SharedInstance.isGameOver = true;
                 playerAnim.SetBool("IsEaten_b", true);
-                Debug.Log("DEAD");
+                AudioManager.SharedInstance.Stop("BGM");
+                AudioManager.SharedInstance.Play("SoftBGM", true);
             }
             else if(iA.itemScale.x <= transform.lossyScale.x)
             {
@@ -132,6 +133,7 @@ public class Player : MonoBehaviour
 
     public IEnumerator Shrink()
     {
+        GameManager.SharedInstance.isGameOver = true;
         while (transform.localScale.x > 0.01f)
         {
             transform.localScale = new Vector3(
@@ -139,8 +141,10 @@ public class Player : MonoBehaviour
                 transform.localScale.y / 2,
                 transform.localScale.z);
 
-            yield return new WaitForSeconds(0.01f);
+            yield return new WaitForSeconds(0.5f);
         }
+
+        transform.gameObject.SetActive(false);
     }
 
     enum MovementDirection
