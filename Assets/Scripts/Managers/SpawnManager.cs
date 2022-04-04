@@ -70,10 +70,13 @@ public class SpawnManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Vector3.Distance(transform.position, player.position) <= summonDistThreshhold)
+        if (!GameManager.SharedInstance.isGameOver)
         {
-            UpdateSpawnScale();
-            SummonSpawn();
+            if (Vector3.Distance(transform.position, player.position) <= summonDistThreshhold)
+            {
+                UpdateSpawnScale();
+                SummonSpawn();
+            }
         }
     }
 

@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Movement();
+        if(!GameManager.SharedInstance.isGameOver) Movement();
     }
 
     private void Movement()
@@ -66,6 +66,7 @@ public class Player : MonoBehaviour
             if(iA.itemScale.x > transform.lossyScale.x)
             {
                 //GameManager.SharedInstance.isGameOver = true;
+                playerAnim.SetBool("IsEaten_b", true);
                 Debug.Log("DEAD");
             }
             else if(iA.itemScale.x <= transform.lossyScale.x)
@@ -121,6 +122,24 @@ public class Player : MonoBehaviour
             case MovementDirection.Left:
                 playerAnim.SetBool("LeftMove_b", false);
                 break;
+        }
+    }
+
+    public void StartDeath()
+    {
+        StartCoroutine(Shrink());
+    }
+
+    public IEnumerator Shrink()
+    {
+        while (transform.localScale.x > 0.01f)
+        {
+            transform.localScale = new Vector3(
+                transform.localScale.x / 2,
+                transform.localScale.y / 2,
+                transform.localScale.z);
+
+            yield return new WaitForSeconds(0.01f);
         }
     }
 
