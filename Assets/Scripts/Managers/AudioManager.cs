@@ -12,6 +12,7 @@ public class AudioManager : MonoBehaviour
     void Awake()
     {
         DontDestroyOnLoad(gameObject);
+        SharedInstance = this;
         foreach(var s in sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();

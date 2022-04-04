@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Movement();
+        if(!GameManager.SharedInstance.isGameOver) Movement();
     }
 
     private void Movement()
@@ -59,10 +59,38 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        ScaleSize(collision);
+        ItemAttributes iA = collision.gameObject.GetComponent<ItemAttributes>();
         if (collision.transform.CompareTag("Enemy"))
         {
-            collision.gameObject.GetComponent<EnemyFollow>().RemoveSpawn();
+            // Determine what gets happens when an enemy is of different size 
+            if(iA.itemScale.x > transform.lossyScale.x)
+            {
+                //GameManager.SharedInstance.isGameOver = true;
+                playerAnim.SetBool("IsEaten_b", true);
+                AudioManager.SharedInstance.Stop("BGM");
+                AudioManager.SharedInstance.Play("SoftBGM", true);
+            }
+            else if(iA.itemScale.x <= transform.lossyScale.x)
+            {
+                ScaleSize(collision);
+                collision.gameObject.GetComponent<EnemyFollow>().RemoveSpawn();
+            }
+            /*else
+            {
+                EnemyFollow ef = iA.gameObject.GetComponent<EnemyFollow>();
+                Vector3 resultingForce = ef.enemyForce * ef.DirectionFacing();
+
+                transform.GetComponent<Rigidbody2D>()
+                    .AddForce(resultingForce, ForceMode2D.Impulse);
+            }*/
+        }
+        else if (collision.transform.CompareTag("Item"))
+        {
+            if(iA.itemScale.x <= transform.lossyScale.x || iA.itemScale.y <= transform.lossyScale.y)
+            {
+                ScaleSize(collision);
+            }
+            collision.gameObject.SetActive(false);
         }
 
         GameManager.SharedInstance.CheckSize();
@@ -76,6 +104,9 @@ public class Player : MonoBehaviour
         FindObjectOfType<CameraFollow>().PushCameraBack(iA.CameraScaleIncrease);
     }
 
+    /// <summary>
+    /// Stops the current direction of the animation
+    /// </summary>
     private void StopDirection()
     {
         switch (currentDirection)
@@ -93,6 +124,34 @@ public class Player : MonoBehaviour
                 playerAnim.SetBool("LeftMove_b", false);
                 break;
         }
+    }
+
+    /// <summary>
+    /// Start the death of the enemy
+    /// </summary>
+    public void StartDeath()
+    {
+        StartCoroutine(Shrink());
+    }
+
+    /// <summary>
+    /// Shrink the player over time
+    /// </summary>
+    /// <returns></returns>
+    public IEnumerator Shrink()
+    {
+        GameManager.SharedInstance.isGameOver = true;
+        while (transform.localScale.x > 0.01f)
+        {
+            transform.localScale = new Vector3(
+                transform.localScale.x / 2,
+                transform.localScale.y / 2,
+                transform.localScale.z);
+
+            yield return new WaitForSeconds(0.5f);
+        }
+
+        transform.gameObject.SetActive(false);
     }
 
     enum MovementDirection

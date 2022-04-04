@@ -17,15 +17,18 @@ public class GameManager : MonoBehaviour
     {
         SharedInstance = this;
         DontDestroyOnLoad(this);
-        isGameOver = true;
+        isGameOver = false;
     }
     // Start is called before the first frame update
     void Start()
     {
         audioManager = FindObjectOfType<AudioManager>();
-        audioManager.Play("BGM-1", true);
+        audioManager.Play("BGM", true);
     }
-    
+
+    /// <summary>
+    /// Check the size of the player and if its gotten bigger than the max size
+    /// </summary>
     public void CheckSize()
     {
         if (player.lossyScale.x >= maxPlayerSize && player.lossyScale.y >= maxPlayerSize) Debug.Log("Winner winner chicken dinner");
