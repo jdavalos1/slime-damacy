@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     private float maxPlayerSize;
     private void Awake()
     {
-        SharedInstance = this;
+        if(SharedInstance == null) SharedInstance = this;
         DontDestroyOnLoad(this);
         isGameOver = false;
     }
