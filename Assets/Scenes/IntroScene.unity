@@ -514,8 +514,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2293336283404749432, guid: 51e5ceae3cdb8744daf48be99865dc34, type: 3}
+      propertyPath: sounds.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: e8b60a6e4506d0345a4033392d874b19, type: 3}
+    - target: {fileID: 2293336283404749432, guid: 51e5ceae3cdb8744daf48be99865dc34, type: 3}
       propertyPath: sounds.Array.data[0].volume
-      value: 1
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 2293336283404749434, guid: 51e5ceae3cdb8744daf48be99865dc34, type: 3}
       propertyPath: m_Name

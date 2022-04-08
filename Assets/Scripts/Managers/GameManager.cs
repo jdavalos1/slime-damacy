@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         audioManager = FindObjectOfType<AudioManager>();
-        audioManager.Play("BGM", true);
+        audioManager.Play("BGM-1", true);
     }
 
     /// <summary>
