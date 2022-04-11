@@ -11,7 +11,8 @@ public class UIManager : MonoBehaviour
     private GameObject endingUI;
     [SerializeField]
     private GameObject openingImg;
-
+    [SerializeField]
+    private GameObject[] endingImgs;
 
     void Awake()
     {
@@ -36,4 +37,11 @@ public class UIManager : MonoBehaviour
         uiAnimator.SetBool("IsDead_b", true);
     }
 
+    public void SetEndingAnimation()
+    {
+        int endImgNum = Random.Range(0, endingImgs.Length);
+
+        endingImgs[endImgNum].SetActive(true);
+        uiAnimator.SetInteger("RestartAnimation", endImgNum);
+    }
 }
