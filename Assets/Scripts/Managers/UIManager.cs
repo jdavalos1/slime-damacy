@@ -34,6 +34,7 @@ public class UIManager : MonoBehaviour
     public void TransitionToGameOver()
     {
         endingUI.SetActive(true);
+        uiAnimator.SetLayerWeight(1, 1);
         uiAnimator.SetBool("IsDead_b", true);
     }
 
