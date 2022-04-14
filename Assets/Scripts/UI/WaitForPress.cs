@@ -14,6 +14,5 @@ public class WaitForPress : MonoBehaviour
         while (!Input.anyKeyDown) yield return null;
 
         gameObject.GetComponentInParent<Animator>().SetBool("StartGame_b", true);
-        UIManager.SharedInstance.KeyPressed();
     }
 }
