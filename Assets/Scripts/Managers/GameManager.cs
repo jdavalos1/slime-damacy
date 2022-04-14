@@ -24,7 +24,6 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Hello world");
         audioManager = FindObjectOfType<AudioManager>();
         audioManager.Play(Constants.BGM, true);
     }
@@ -34,6 +33,9 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void CheckSize()
     {
-        if (player.lossyScale.x >= maxPlayerSize && player.lossyScale.y >= maxPlayerSize) Debug.Log("Winner winner chicken dinner");
+        if (player.lossyScale.x >= maxPlayerSize && player.lossyScale.y >= maxPlayerSize)
+        {
+            UIManager.SharedInstance.TransitionToGameWin();
+        }
     }
 }

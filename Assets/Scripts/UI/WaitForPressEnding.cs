@@ -13,6 +13,7 @@ public class WaitForPressEnding : MonoBehaviour
     {
         while (!Input.anyKeyDown) yield return null;
 
+        UIManager.SharedInstance.KeyPressed();
         UIManager.SharedInstance.SetEndingAnimation();
     }
 }

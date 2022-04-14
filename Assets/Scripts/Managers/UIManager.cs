@@ -43,6 +43,19 @@ public class UIManager : MonoBehaviour
         int endImgNum = Random.Range(0, endingImgs.Length);
 
         endingImgs[endImgNum].SetActive(true);
+        uiAnimator.SetBool("Pressed_b", true);
         uiAnimator.SetInteger("RestartAnimation", endImgNum);
+    }
+
+    public void TransitionToGameWin()
+    {
+        endingUI.SetActive(true);
+        uiAnimator.SetLayerWeight(1, 1);
+        uiAnimator.SetBool("WonGame_b", true);
+    }
+
+    public void KeyPressed()
+    {
+        uiAnimator.SetBool("Pressed_b", true);
     }
 }

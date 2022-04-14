@@ -2413,6 +2413,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 315648855}
+    - target: {fileID: 2467929869624786496, guid: 7ce504c19bb850a4588e50b8ea929fe5, type: 3}
+      propertyPath: maxPlayerSize
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2467929869624786502, guid: 7ce504c19bb850a4588e50b8ea929fe5, type: 3}
       propertyPath: m_Name
       value: GameManager
