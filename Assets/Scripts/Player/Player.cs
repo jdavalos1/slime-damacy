@@ -67,8 +67,8 @@ public class Player : MonoBehaviour
             {
                 //GameManager.SharedInstance.isGameOver = true;
                 playerAnim.SetBool("IsEaten_b", true);
-                AudioManager.SharedInstance.Stop("BGM");
-                AudioManager.SharedInstance.Play("SoftBGM", true);
+                AudioManager.SharedInstance.Stop(Constants.BGM);
+                AudioManager.SharedInstance.Play(Constants.SoftBGM, true);
             }
             else if(iA.itemScale.x <= transform.lossyScale.x)
             {
@@ -151,6 +151,7 @@ public class Player : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
         }
 
+        UIManager.SharedInstance.TransitionToGameOver();
         transform.gameObject.SetActive(false);
     }
 

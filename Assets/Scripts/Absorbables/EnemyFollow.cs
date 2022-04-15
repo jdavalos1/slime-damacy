@@ -73,7 +73,6 @@ public class EnemyFollow : MonoBehaviour
         }
         else
         {
-            Debug.Log(GameManager.SharedInstance.isGameOver);
             MoveRandom();
         }
     }
