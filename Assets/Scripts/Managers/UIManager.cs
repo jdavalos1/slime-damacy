@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {
     public static UIManager SharedInstance;
+    public GameObject introSlimes;
     private Animator uiAnimator;
     [SerializeField]
     private GameObject endingUI;
@@ -19,6 +20,7 @@ public class UIManager : MonoBehaviour
         if (SharedInstance == null) SharedInstance = this;
 
         uiAnimator = GetComponent<Animator>();
+
     }
 
     public void TransitionToGame()
@@ -42,6 +44,7 @@ public class UIManager : MonoBehaviour
     {
         int endImgNum = Random.Range(0, endingImgs.Length);
 
+        GameManager.SharedInstance.startValue = endImgNum;
         endingImgs[endImgNum].SetActive(true);
         uiAnimator.SetBool("Pressed_b", true);
         uiAnimator.SetInteger("RestartAnimation", endImgNum);
@@ -57,5 +60,10 @@ public class UIManager : MonoBehaviour
     public void KeyPressed()
     {
         uiAnimator.SetBool("Pressed_b", true);
+    }
+    
+    public void HideSlimes()
+    {
+        introSlimes.SetActive(false);
     }
 }

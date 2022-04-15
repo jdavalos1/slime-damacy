@@ -237,6 +237,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59237ca3c042c9e45828104ae99f07e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  introSlimes: {fileID: 377522446}
+  endingUI: {fileID: 0}
+  openingImg: {fileID: 0}
+  endingImgs: []
 --- !u!95 &169032831
 Animator:
   serializedVersion: 3
@@ -339,6 +343,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &377522446 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 377522446, guid: aec1680ad80aad84b9df464bb977f0f0, type: 3}
+  m_PrefabInstance: {fileID: 562656902}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &562656902
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -346,10 +355,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 169032829}
     m_Modifications:
-    - target: {fileID: 7867931877905908601, guid: aec1680ad80aad84b9df464bb977f0f0, type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 766337280
-      objectReference: {fileID: 0}
     - target: {fileID: 7867931878387983777, guid: aec1680ad80aad84b9df464bb977f0f0, type: 3}
       propertyPath: m_Name
       value: Start UI

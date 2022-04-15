@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public int startValue;
+    public int startValue = 0;
     public static GameManager SharedInstance;
     public bool isGameOver;
     private AudioManager audioManager;
@@ -18,7 +18,6 @@ public class GameManager : MonoBehaviour
     {
         if(SharedInstance == null) SharedInstance = this;
         DontDestroyOnLoad(this);
-        startValue = -1;
         isGameOver = false;
     }
     // Start is called before the first frame update
