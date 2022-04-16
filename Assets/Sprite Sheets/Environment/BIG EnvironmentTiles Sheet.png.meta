@@ -1,7 +1,112 @@
 fileFormatVersion: 2
 guid: 9bf60b1457f04474d91fff0d561ca5d0
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -7354824145720908712
+    second: Open Door Forward
+  - first:
+      213: 6628993345446304229
+    second: BIG EnvironmentTiles Sheet_1
+  - first:
+      213: -6140535507370478992
+    second: BIG EnvironmentTiles Sheet_2
+  - first:
+      213: 4292429063353923454
+    second: BIG EnvironmentTiles Sheet_3
+  - first:
+      213: 9187152652984600493
+    second: BIG EnvironmentTiles Sheet_4
+  - first:
+      213: -3646973100563172934
+    second: Right Closed Door
+  - first:
+      213: 7145340830256928243
+    second: Large Red Potion
+  - first:
+      213: 5480900749291292800
+    second: Large Blue Potion
+  - first:
+      213: -7931320406110540932
+    second: BIG EnvironmentTiles Sheet_8
+  - first:
+      213: -223568155106044884
+    second: BIG EnvironmentTiles Sheet_9
+  - first:
+      213: -669864871264982869
+    second: BIG EnvironmentTiles Sheet_10
+  - first:
+      213: 7499259896810527621
+    second: Small Blue Potion Reflection
+  - first:
+      213: 2498392138451946669
+    second: Small Red Potion No Reflection
+  - first:
+      213: -4633561970662691740
+    second: Closed Door Forward
+  - first:
+      213: -2464115684091992345
+    second: BIG EnvironmentTiles Sheet_14
+  - first:
+      213: 9175339904244175531
+    second: BIG EnvironmentTiles Sheet_15
+  - first:
+      213: -7253955990519242314
+    second: BIG EnvironmentTiles Sheet_16
+  - first:
+      213: 3506806101347966073
+    second: Small Lab Cabinet
+  - first:
+      213: -8536983647964306112
+    second: Right Open Door
+  - first:
+      213: 9143902640439923410
+    second: Small Red Potion Reflection
+  - first:
+      213: 1708252866225061462
+    second: Small Blue Potion No Reflection
+  - first:
+      213: 1836305362282663975
+    second: Lab Workstation
+  - first:
+      213: -8592447202323235944
+    second: Lab Cabinet
+  - first:
+      213: -6824127663708910328
+    second: Small Green Potion Reflection
+  - first:
+      213: -5704687067451995193
+    second: Small Green Potion No Reflection
+  - first:
+      213: -1738130444272617592
+    second: Closed Door Left
+  - first:
+      213: 7760116438537648301
+    second: Down Closed Door
+  - first:
+      213: -4405896293067051534
+    second: Big Green Potion No Reflection
+  - first:
+      213: -965562422932048385
+    second: Desk Chair
+  - first:
+      213: 826025737086958089
+    second: Open Door Left
+  - first:
+      213: 6598714129614897437
+    second: Lab Desk
+  - first:
+      213: 7450683301054105946
+    second: Lab Sink
+  - first:
+      213: 8260186461014927313
+    second: Down Open Doo
+  - first:
+      213: -106393106332657135
+    second: Blue Pot
+  - first:
+      213: -1578565992906581482
+    second: Red Pot
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +146,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,9 +180,768 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Open Door Forward
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 488
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 854e6d0386a6ee990800000000000000
+      internalID: -7354824145720908712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BIG EnvironmentTiles Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 548
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e951c5635aeefb50800000000000000
+      internalID: 6628993345446304229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BIG EnvironmentTiles Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 548
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07272807d7f68caa0800000000000000
+      internalID: -6140535507370478992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BIG EnvironmentTiles Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 549
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e77f5c8ad75c19b30800000000000000
+      internalID: 4292429063353923454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BIG EnvironmentTiles Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 546
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da74f6a89a25f7f70800000000000000
+      internalID: 9187152652984600493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Right Closed Door
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 476
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab1f68b9949536dc0800000000000000
+      internalID: -3646973100563172934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Large Red Potion
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 544
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f51f82a0a9592360800000000000000
+      internalID: 7145340830256928243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Large Blue Potion
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 544
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0880ea24132101c40800000000000000
+      internalID: 5480900749291292800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BIG EnvironmentTiles Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 474
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7b69f1dc1a4ee190800000000000000
+      internalID: -7931320406110540932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BIG EnvironmentTiles Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 474
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2490db82f9b5ecf0800000000000000
+      internalID: -223568155106044884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BIG EnvironmentTiles Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 474
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba8ecbcd27924b6f0800000000000000
+      internalID: -669864871264982869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Small Blue Potion Reflection
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 472
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58b59b3b429b21860800000000000000
+      internalID: 7499259896810527621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Small Red Potion No Reflection
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 470
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dac8e02b9621ca220800000000000000
+      internalID: 2498392138451946669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Closed Door Forward
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 343
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46c24e5ffe742bfb0800000000000000
+      internalID: -4633561970662691740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BIG EnvironmentTiles Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 404
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e66a3c37d3bdcdd0800000000000000
+      internalID: -2464115684091992345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BIG EnvironmentTiles Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 404
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba2d0f5a70b555f70800000000000000
+      internalID: 9175339904244175531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BIG EnvironmentTiles Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 404
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b1a8c0b575c45b90800000000000000
+      internalID: -7253955990519242314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Small Lab Cabinet
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 406
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97c940fb19daaa030800000000000000
+      internalID: 3506806101347966073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Right Open Door
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 339
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 045e4c16a9a868980800000000000000
+      internalID: -8536983647964306112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Small Red Potion Reflection
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 414
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d29d28410ba5ee70800000000000000
+      internalID: 9143902640439923410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Small Blue Potion No Reflection
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65e33ed5eeee4b710800000000000000
+      internalID: 1708252866225061462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lab Workstation
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 190
+        width: 128
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 720d0027ffddb7910800000000000000
+      internalID: 1836305362282663975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lab Cabinet
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 188
+        width: 128
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89b79325bce71c880800000000000000
+      internalID: -8592447202323235944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Small Green Potion Reflection
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 370
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80dc6beab04db41a0800000000000000
+      internalID: -6824127663708910328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Small Green Potion No Reflection
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 370
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cb42cd3651e4d0b0800000000000000
+      internalID: -5704687067451995193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Closed Door Left
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 186
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 887b6d7e19be0e7e0800000000000000
+      internalID: -1738130444272617592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Down Closed Door
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 182
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da8b4b639c871bb60800000000000000
+      internalID: 7760116438537648301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big Green Potion No Reflection
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 304
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fd27863aac1bd2c0800000000000000
+      internalID: -4405896293067051534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desk Chair
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 224
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff57ba49712a992f0800000000000000
+      internalID: -965562422932048385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Open Door Left
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 43
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90af56a0802a67b00800000000000000
+      internalID: 826025737086958089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lab Desk
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 60
+        width: 128
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d110c061a87539b50800000000000000
+      internalID: 6598714129614897437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lab Sink
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 60
+        width: 128
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a59c345acf4266760800000000000000
+      internalID: 7450683301054105946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Down Open Doo
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 40
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d7294b62d312a270800000000000000
+      internalID: 8260186461014927313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Pot
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 152
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11add729804068ef0800000000000000
+      internalID: -106393106332657135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red Pot
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 152
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61a9a42d79ec71ae0800000000000000
+      internalID: -1578565992906581482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
