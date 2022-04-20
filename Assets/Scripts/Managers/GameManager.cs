@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public int startValue = 0;
     public static GameManager SharedInstance;
     public bool isGameOver;
     private AudioManager audioManager;
@@ -15,7 +16,7 @@ public class GameManager : MonoBehaviour
     private float maxPlayerSize;
     private void Awake()
     {
-        SharedInstance = this;
+        if(SharedInstance == null) SharedInstance = this;
         DontDestroyOnLoad(this);
         isGameOver = false;
     }
@@ -23,7 +24,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         audioManager = FindObjectOfType<AudioManager>();
-        audioManager.Play("BGM", true);
+        audioManager.Play(Constants.BGM, true);
     }
 
     /// <summary>
@@ -31,6 +32,10 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void CheckSize()
     {
-        if (player.lossyScale.x >= maxPlayerSize && player.lossyScale.y >= maxPlayerSize) Debug.Log("Winner winner chicken dinner");
+        if (player.lossyScale.x >= maxPlayerSize && player.lossyScale.y >= maxPlayerSize)
+        {
+            isGameOver = true;
+            UIManager.SharedInstance.TransitionToGameWin();
+        }
     }
 }
