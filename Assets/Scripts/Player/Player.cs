@@ -60,22 +60,31 @@ public class Player : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         ItemAttributes iA = collision.gameObject.GetComponent<ItemAttributes>();
-        if (collision.transform.CompareTag("Enemy"))
+        if (collision.transform.CompareTag("Item"))
         {
-            // Determine what gets happens when an enemy is of different size 
-            if(iA.itemScale.x > transform.lossyScale.x)
+            if(iA.itemScale.x <= transform.lossyScale.x || iA.itemScale.y <= transform.lossyScale.y)
             {
-                //GameManager.SharedInstance.isGameOver = true;
-                playerAnim.SetBool("IsEaten_b", true);
-                AudioManager.SharedInstance.Stop(Constants.BGM);
-                AudioManager.SharedInstance.Play(Constants.SoftBGM, true);
+                ScaleSize(iA);
+                collision.gameObject.SetActive(false);
             }
-            else if(iA.itemScale.x <= transform.lossyScale.x)
-            {
-                ScaleSize(collision);
-                collision.gameObject.GetComponent<EnemyFollow>().RemoveSpawn();
-            }
-            /*else
+        }
+
+        GameManager.SharedInstance.CheckSize();
+    }
+    public bool CanSwallowItem(ItemAttributes iA)
+    {
+        if(iA.itemScale.x > transform.lossyScale.x)
+        {
+            playerAnim.SetBool("IsEaten_b", true);
+            AudioManager.SharedInstance.Stop(Constants.BGM);
+            AudioManager.SharedInstance.Play(Constants.SoftBGM, true);
+            return false;
+        }
+        else if(iA.itemScale.x <= transform.lossyScale.x)
+        {
+            ScaleSize(iA);
+        }
+        /*else
             {
                 EnemyFollow ef = iA.gameObject.GetComponent<EnemyFollow>();
                 Vector3 resultingForce = ef.enemyForce * ef.DirectionFacing();
@@ -83,23 +92,12 @@ public class Player : MonoBehaviour
                 transform.GetComponent<Rigidbody2D>()
                     .AddForce(resultingForce, ForceMode2D.Impulse);
             }*/
-        }
-        else if (collision.transform.CompareTag("Item"))
-        {
-            if(iA.itemScale.x <= transform.lossyScale.x || iA.itemScale.y <= transform.lossyScale.y)
-            {
-                ScaleSize(collision);
-            }
-            collision.gameObject.SetActive(false);
-        }
-
-        GameManager.SharedInstance.CheckSize();
+        return true;
     }
 
-    private void ScaleSize(Collision2D collision)
+    private void ScaleSize(ItemAttributes iA)
     {
-        if (collision == null) return;
-        ItemAttributes iA = collision.gameObject.GetComponent<ItemAttributes>();
+        if (iA == null) return;
         transform.localScale += new Vector3(iA.PlayerScaleIncrease, iA.PlayerScaleIncrease, 0);
         FindObjectOfType<CameraFollow>().PushCameraBack(iA.CameraScaleIncrease);
     }
@@ -154,6 +152,7 @@ public class Player : MonoBehaviour
         UIManager.SharedInstance.TransitionToGameOver();
         transform.gameObject.SetActive(false);
     }
+
 
     enum MovementDirection
     {
