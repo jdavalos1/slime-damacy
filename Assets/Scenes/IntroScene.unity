@@ -519,11 +519,31 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2293336283404749432, guid: 51e5ceae3cdb8744daf48be99865dc34, type: 3}
+      propertyPath: sounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2293336283404749432, guid: 51e5ceae3cdb8744daf48be99865dc34, type: 3}
       propertyPath: sounds.Array.data[0].clip
       value: 
       objectReference: {fileID: 8300000, guid: e8b60a6e4506d0345a4033392d874b19, type: 3}
     - target: {fileID: 2293336283404749432, guid: 51e5ceae3cdb8744daf48be99865dc34, type: 3}
+      propertyPath: sounds.Array.data[0].name
+      value: BGM
+      objectReference: {fileID: 0}
+    - target: {fileID: 2293336283404749432, guid: 51e5ceae3cdb8744daf48be99865dc34, type: 3}
+      propertyPath: sounds.Array.data[1].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 06834a7c71b9f0e40ab50164022e8e3c, type: 3}
+    - target: {fileID: 2293336283404749432, guid: 51e5ceae3cdb8744daf48be99865dc34, type: 3}
+      propertyPath: sounds.Array.data[1].name
+      value: SoftBGM
+      objectReference: {fileID: 0}
+    - target: {fileID: 2293336283404749432, guid: 51e5ceae3cdb8744daf48be99865dc34, type: 3}
       propertyPath: sounds.Array.data[0].volume
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2293336283404749432, guid: 51e5ceae3cdb8744daf48be99865dc34, type: 3}
+      propertyPath: sounds.Array.data[1].volume
       value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 2293336283404749434, guid: 51e5ceae3cdb8744daf48be99865dc34, type: 3}
