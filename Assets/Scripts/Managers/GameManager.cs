@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
     {
         if (player.lossyScale.x >= maxPlayerSize && player.lossyScale.y >= maxPlayerSize)
         {
+            isGameOver = true;
             UIManager.SharedInstance.TransitionToGameWin();
         }
     }
