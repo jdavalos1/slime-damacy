@@ -131,7 +131,6 @@ public class EnemyFollow : MonoBehaviour
         // Allow enemy to move over time
         while(elapsedTime < movementTime)
         {
-            Debug.Log(elapsedTime);
             elapsedTime += Time.deltaTime;
             transform.position = Vector3.Lerp(startPos, endPos, enemyMoveSpeed * elapsedTime / movementTime);
             yield return null;
