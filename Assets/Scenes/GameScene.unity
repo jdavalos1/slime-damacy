@@ -484,6 +484,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Large Enemy Spawner (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4675809040375404322, guid: d489416f3e39db84dbc129f0394a11a7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d489416f3e39db84dbc129f0394a11a7, type: 3}
 --- !u!1 &451537323
@@ -852,7 +856,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &888148630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2007,7 +2011,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1788286385}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.97, y: 10.56, z: -0.1}
+  m_LocalPosition: {x: 6.55, y: 10.25, z: -0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 519420032}
@@ -2410,11 +2414,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4675809040375404320, guid: d489416f3e39db84dbc129f0394a11a7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.61
+      value: 1.98
       objectReference: {fileID: 0}
     - target: {fileID: 4675809040375404320, guid: d489416f3e39db84dbc129f0394a11a7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.26
+      value: 1.91
       objectReference: {fileID: 0}
     - target: {fileID: 4675809040375404320, guid: d489416f3e39db84dbc129f0394a11a7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2462,15 +2466,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4675809040375404321, guid: d489416f3e39db84dbc129f0394a11a7, type: 3}
       propertyPath: spawnLimits.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4675809040375404321, guid: d489416f3e39db84dbc129f0394a11a7, type: 3}
       propertyPath: spawnLimits.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4675809040375404322, guid: d489416f3e39db84dbc129f0394a11a7, type: 3}
       propertyPath: m_Name
       value: Large Enemy Spawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 4675809040375404322, guid: d489416f3e39db84dbc129f0394a11a7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d489416f3e39db84dbc129f0394a11a7, type: 3}
@@ -2481,18 +2489,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1788286386}
     m_Modifications:
-    - target: {fileID: 6366502117729847026, guid: 39bac2615a05e2141990437478521e8c, type: 3}
-      propertyPath: m_Mass
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6366502117729847026, guid: 39bac2615a05e2141990437478521e8c, type: 3}
-      propertyPath: m_Simulated
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6366502117729847027, guid: 39bac2615a05e2141990437478521e8c, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6366502117729847037, guid: 39bac2615a05e2141990437478521e8c, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2515,7 +2511,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6366502117729847037, guid: 39bac2615a05e2141990437478521e8c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: 6366502117729847037, guid: 39bac2615a05e2141990437478521e8c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2549,13 +2545,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 6366502117729847039, guid: 39bac2615a05e2141990437478521e8c, type: 3}
-      propertyPath: m_Enabled
-      value: 1
+    - target: {fileID: 6366502117729847038, guid: 39bac2615a05e2141990437478521e8c, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6366502117729847039, guid: 39bac2615a05e2141990437478521e8c, type: 3}
       propertyPath: slimeSpeed
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39bac2615a05e2141990437478521e8c, type: 3}
@@ -2629,6 +2625,10 @@ PrefabInstance:
     - target: {fileID: 6875582511993772523, guid: b88ecde888d655a4fb88bb80e21236f4, type: 3}
       propertyPath: m_Name
       value: Small Enemy Spawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 6875582511993772523, guid: b88ecde888d655a4fb88bb80e21236f4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b88ecde888d655a4fb88bb80e21236f4, type: 3}

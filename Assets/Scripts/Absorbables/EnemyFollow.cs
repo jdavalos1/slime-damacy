@@ -52,6 +52,7 @@ public class EnemyFollow : MonoBehaviour
     private Transform player;
     private Movement currentMove;
     private bool isMoving;
+    private float elapsedTime;
 
     public SpawnManager spawnOwner;
 
@@ -125,13 +126,14 @@ public class EnemyFollow : MonoBehaviour
              0);
 
         Vector3 endPos = randomLocation + startPos;
-        float elapseTime = 0f;
+        elapsedTime = 0.0f;
 
         // Allow enemy to move over time
-        while(elapseTime < movementTime)
+        while(elapsedTime < movementTime)
         {
-            elapseTime += Time.deltaTime;
-            transform.position = Vector3.Lerp(startPos, endPos, enemyMoveSpeed * elapseTime / movementTime);
+            Debug.Log(elapsedTime);
+            elapsedTime += Time.deltaTime;
+            transform.position = Vector3.Lerp(startPos, endPos, enemyMoveSpeed * elapsedTime / movementTime);
             yield return null;
         }
 
@@ -144,6 +146,21 @@ public class EnemyFollow : MonoBehaviour
         isMoving = false;
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        ItemAttributes iA = gameObject.GetComponent<ItemAttributes>();
+        if (collision.gameObject.CompareTag("Item"))
+        {
+            elapsedTime = movementTime;
+        }
+        else if (collision.gameObject.CompareTag("Player"))
+        {
+            if (FindObjectOfType<Player>().CanSwallowItem(iA))
+            {
+                RemoveSpawn();
+            }
+        }
+    }
     /// <summary>
     /// Sets the animation of the enemy as it follows the player
     /// </summary>
