@@ -5,6 +5,11 @@ using UnityEngine;
 public class ItemAttributes : MonoBehaviour
 {
     [SerializeField]
+    private Sprite _spriteBaseImg;
+
+    public Sprite itemBaseImage => _spriteBaseImg;
+
+    [SerializeField]
     private float _playerScaleIncrease;
 
     /// <summary>

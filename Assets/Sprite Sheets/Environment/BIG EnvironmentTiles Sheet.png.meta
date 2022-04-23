@@ -129,6 +129,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -952,6 +953,42 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Small Red Potion No Reflection: 2498392138451946669
+      BIG EnvironmentTiles Sheet_9: -223568155106044884
+      Large Blue Potion: 5480900749291292800
+      Down Closed Door: 7760116438537648301
+      Lab Cabinet: -8592447202323235944
+      Small Red Potion Reflection: 9143902640439923410
+      Red Pot: -1578565992906581482
+      Closed Door Left: -1738130444272617592
+      BIG EnvironmentTiles Sheet_14: -2464115684091992345
+      Right Open Door: -8536983647964306112
+      Small Blue Potion Reflection: 7499259896810527621
+      Blue Pot: -106393106332657135
+      Large Red Potion: 7145340830256928243
+      Open Door Forward: -7354824145720908712
+      Desk Chair: -965562422932048385
+      BIG EnvironmentTiles Sheet_16: -7253955990519242314
+      Lab Workstation: 1836305362282663975
+      Closed Door Forward: -4633561970662691740
+      BIG EnvironmentTiles Sheet_8: -7931320406110540932
+      BIG EnvironmentTiles Sheet_15: 9175339904244175531
+      Small Blue Potion No Reflection: 1708252866225061462
+      Big Green Potion No Reflection: -4405896293067051534
+      BIG EnvironmentTiles Sheet_1: 6628993345446304229
+      Right Closed Door: -3646973100563172934
+      Small Green Potion Reflection: -6824127663708910328
+      Lab Desk: 6598714129614897437
+      Open Door Left: 826025737086958089
+      Down Open Doo: 8260186461014927313
+      BIG EnvironmentTiles Sheet_3: 4292429063353923454
+      Lab Sink: 7450683301054105946
+      BIG EnvironmentTiles Sheet_10: -669864871264982869
+      Small Lab Cabinet: 3506806101347966073
+      BIG EnvironmentTiles Sheet_4: 9187152652984600493
+      BIG EnvironmentTiles Sheet_2: -6140535507370478992
+      Small Green Potion No Reflection: -5704687067451995193
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
