@@ -54,7 +54,7 @@ public class Player : MonoBehaviour
             }
         }
 
-        transform.position += move * Time.deltaTime * slimeSpeed;
+        transform.position += slimeSpeed * Time.deltaTime * move;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -98,6 +98,8 @@ public class Player : MonoBehaviour
     private void ScaleSize(ItemAttributes iA)
     {
         if (iA == null) return;
+        UIManager.SharedInstance.IncreaseSize(iA.itemScale.x, transform.lossyScale.x);
+        UIManager.SharedInstance.UpdateAbsorbedImage(iA);
         transform.localScale += new Vector3(iA.PlayerScaleIncrease, iA.PlayerScaleIncrease, 0);
         FindObjectOfType<CameraFollow>().PushCameraBack(iA.CameraScaleIncrease);
     }

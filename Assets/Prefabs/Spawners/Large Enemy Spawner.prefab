@@ -27,6 +27,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 15, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -46,8 +47,8 @@ MonoBehaviour:
   currentlyActive: 0
   maxPooled: 2
   summonDistThreshhold: 15
-  spawnObject: {fileID: 1330354615934631971, guid: 12db2c4a134961248bb0e29791a963b4, type: 3}
+  spawnObject: {fileID: 635481141399062776, guid: 4b3b89b1a1b04fd44a871fe2fccc360e, type: 3}
   player: {fileID: 0}
   maxSpawn: 1
-  spawnLimits: {x: 5, y: 5}
-  spawnScale: {x: 1, y: 1, z: 0}
+  spawnLimits: {x: 0, y: 0}
+  spawnScale: {x: 0.5, y: 0.5, z: 0}

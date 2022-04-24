@@ -132,6 +132,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -976,6 +977,43 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      BigRedLeft_1: -8154170035446266633
+      BigBlueUp_1: -3942180483422469069
+      BigYellowUp_2: 74981688251153097
+      BigRedLeft_3: 12800161310486606
+      BigRedDown_3: 7022364916459611200
+      BigYellowLeft_3: -2035066606881533314
+      BigYellowRight_3: 629385745159072321
+      BigBlueRight_2: 255402492264567812
+      BigYellowRight_2: -5795595042841090526
+      BigYellowLeft_2: 3590427004937897667
+      BigBlueLeft_2: -3200644184312899530
+      BigBlueRight_3: -5433061190496639839
+      BigYellowDown_3: 1642149079830413486
+      BigRedRight_3: -5633736518608659355
+      BigRedRight_2: 7788768082276403390
+      BigRedUp_2: -3844568770364565425
+      BigBlueDown_1: 3359583954449870762
+      BigBlueLeft_1: -7142526132927642550
+      BigRedLeft_2: -1476823886113356562
+      BigRedRight_1: 2330818838711435784
+      BigYellowDown_2: -3713716947375464510
+      BigBlueDown_2: 6478840152025246451
+      BigRedDown_2: -9058507243039695019
+      BigBlueRight_1: 1730902129710092312
+      BigRedUp_1: 4066766221153954475
+      BigYellowRight_1: 5448297637355947830
+      BigBlueDown_3: 4769506295694629514
+      BigYellowUp_3: -6087624932448588787
+      BigRedDown_1: -8533946674559723902
+      BigBlueLeft_3: -2892123416069092484
+      BigYellowDown_1: -138296129517132636
+      BigRedUp_3: 2495100897652945926
+      BigYellowLeft_1: -1137529909226943826
+      BigBlueUp_2: 3781059017518383675
+      BigYellowUp_1: 1414076759305930391
+      BigBlueUp_3: -3729795324884843545
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

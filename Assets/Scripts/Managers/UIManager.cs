@@ -1,6 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
+using Random = UnityEngine.Random;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
@@ -14,7 +16,13 @@ public class UIManager : MonoBehaviour
     private GameObject openingImg;
     [SerializeField]
     private GameObject[] endingImgs;
-
+    [SerializeField]
+    private TextMeshProUGUI sizeIncreaseText;
+    [SerializeField]
+    private TextMeshProUGUI currentSizeText;
+    [SerializeField]
+    private Image lastAbsorbed;
+    
     void Awake()
     {
         if (SharedInstance == null) SharedInstance = this;
@@ -65,5 +73,19 @@ public class UIManager : MonoBehaviour
     public void HideSlimes()
     {
         introSlimes.SetActive(false);
+    }
+
+    public void IncreaseSize(float sizeIncrease, float currentSize)
+    {
+        uiAnimator.SetBool("ItemObtained_b", true);
+        sizeIncreaseText.gameObject.SetActive(true);
+        sizeIncreaseText.text = $"+{sizeIncrease}";
+        currentSizeText.text = $"{(currentSize + sizeIncrease):0.00} m";
+
+    }
+    
+    public void UpdateAbsorbedImage(ItemAttributes iA)
+    {
+        lastAbsorbed.sprite = iA.itemBaseImage;
     }
 }
