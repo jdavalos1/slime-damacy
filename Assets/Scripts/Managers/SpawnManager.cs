@@ -60,7 +60,7 @@ public class SpawnManager : MonoBehaviour
         {
             temp = Instantiate(spawnObject);
             temp.SetActive(false);
-            temp.GetComponent<EnemyFollow>().spawnOwner = this;
+            temp.GetComponent<Enemy>().spawnOwner = this;
             spawnObjects.Add(temp);
         }
 

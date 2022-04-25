@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4946001993253972953}
   - component: {fileID: 8404091916952448899}
   - component: {fileID: 1528412665532830028}
-  - component: {fileID: 2884932632796760565}
+  - component: {fileID: -260867296355724986}
   - component: {fileID: 4563249129366949995}
   m_Layer: 0
   m_Name: Small Blue Enemy
@@ -151,7 +151,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
---- !u!114 &2884932632796760565
+--- !u!114 &-260867296355724986
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,16 +160,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 4946001993253972932}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 150a72c0024225a42a5db53390b6dc7b, type: 3}
+  m_Script: {fileID: 11500000, guid: 7908072ccaf480b4e991b20bc9c63e41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemyForce: {x: 0, y: 0}
   maxDistMove: {x: 2, y: 2}
   distThreshhold: 5
-  enemyMoveSpeed: 1
   movementTime: 6
   pauseDuration: 3
   XThreshhold: 0.2
+  enemyMoveSpeed: 1
   spawnOwner: {fileID: 0}
 --- !u!50 &4563249129366949995
 Rigidbody2D:

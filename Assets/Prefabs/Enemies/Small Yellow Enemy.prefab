@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3486571095020887233}
   - component: {fileID: -9196308133910865765}
   - component: {fileID: 7059234442842302036}
-  - component: {fileID: 6685634991836315373}
+  - component: {fileID: 3575287151490560369}
   - component: {fileID: 3803513617334393378}
   m_Layer: 0
   m_Name: Small Yellow Enemy
@@ -151,7 +151,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
---- !u!114 &6685634991836315373
+--- !u!114 &3575287151490560369
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,16 +160,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 3486571095020887260}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 150a72c0024225a42a5db53390b6dc7b, type: 3}
+  m_Script: {fileID: 11500000, guid: 7908072ccaf480b4e991b20bc9c63e41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemyForce: {x: 0, y: 0}
   maxDistMove: {x: 3, y: 3}
   distThreshhold: 5
-  enemyMoveSpeed: 2
   movementTime: 5
   pauseDuration: 3
   XThreshhold: 0.2
+  enemyMoveSpeed: 2
   spawnOwner: {fileID: 0}
 --- !u!50 &3803513617334393378
 Rigidbody2D:
