@@ -1043,11 +1043,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6875582511993772516, guid: b88ecde888d655a4fb88bb80e21236f4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.36
+      value: 6.96
       objectReference: {fileID: 0}
     - target: {fileID: 6875582511993772516, guid: b88ecde888d655a4fb88bb80e21236f4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.7
+      value: 11.67
       objectReference: {fileID: 0}
     - target: {fileID: 6875582511993772516, guid: b88ecde888d655a4fb88bb80e21236f4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3152,6 +3152,10 @@ PrefabInstance:
     - target: {fileID: 2798741831524270161, guid: 0b2f768d5bb3e5244b536882c80f212a, type: 3}
       propertyPath: m_Name
       value: Laboratory
+      objectReference: {fileID: 0}
+    - target: {fileID: 3210739422587729514, guid: 0b2f768d5bb3e5244b536882c80f212a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b2f768d5bb3e5244b536882c80f212a, type: 3}

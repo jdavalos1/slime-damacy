@@ -182,6 +182,7 @@ public class Enemy : MonoBehaviour
         ItemAttributes iA = gameObject.GetComponent<ItemAttributes>();
         if (collision.gameObject.CompareTag("Item"))
         {
+
             elapsedTime = movementTime;
         }
         else if (collision.gameObject.CompareTag("Player"))
