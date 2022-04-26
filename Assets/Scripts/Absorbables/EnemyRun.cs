@@ -19,6 +19,9 @@ public class EnemyRun : Enemy
  
     }
 
+    /// <summary>
+    /// Moves away from the player.
+    /// </summary>
     private void RunFromPlayer()
     {
         if (isMoving)
@@ -28,8 +31,13 @@ public class EnemyRun : Enemy
         }
 
         StopAnimation();
-        transform.position = -Vector3.MoveTowards(transform.position,
-            player.position, enemyMoveSpeed * Time.deltaTime);
+        Vector3 moveTowards = Vector3.MoveTowards(
+                                        transform.position,
+                                        player.position,
+                                        -enemyMoveSpeed * Time.deltaTime);
+        transform.position = new Vector3(moveTowards.x,
+                                         moveTowards.y,
+                                         player.position.x);
         SetAnimation(-(player.position - transform.position).normalized);
     }
 }

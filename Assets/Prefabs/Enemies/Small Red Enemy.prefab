@@ -169,7 +169,7 @@ MonoBehaviour:
   movementTime: 4
   pauseDuration: 2
   XThreshhold: 0.2
-  enemyMoveSpeed: 1.5
+  enemyMoveSpeed: 3
   spawnOwner: {fileID: 0}
 --- !u!50 &8356247153799000019
 Rigidbody2D:
