@@ -6,6 +6,8 @@ public class SpawnManager : MonoBehaviour
 {
     public int currentlyActive;
 
+    [SerializeField]
+    private Vector2 boundaries;
     /// <summary>
     /// Objects to pool
     /// </summary>

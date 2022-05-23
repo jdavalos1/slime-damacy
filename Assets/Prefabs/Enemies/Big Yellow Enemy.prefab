@@ -123,7 +123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spriteBaseImg: {fileID: -138296129517132636, guid: 188f6e77de3f17a47a67154d61e5306f, type: 3}
   _playerScaleIncrease: 0.5
-  _cameraScaleIncrease: 25
+  _cameraScaleIncrease: 0.25
   itemScale: {x: 1.1, y: 1.1}
 --- !u!61 &7879366417578853135
 BoxCollider2D:
@@ -165,11 +165,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyForce: {x: 5, y: 5}
   maxDistMove: {x: 3, y: 3}
-  distThreshhold: 5
-  enemyMoveSpeed: 3.7
+  distThreshhold: 3
   movementTime: 2
   pauseDuration: 2
   XThreshhold: 0.2
+  enemyMoveSpeed: 3.7
   spawnOwner: {fileID: 0}
 --- !u!50 &5743424664206142349
 Rigidbody2D:

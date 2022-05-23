@@ -123,6 +123,17 @@ public class Enemy : MonoBehaviour
     /// </summary>
     protected void MoveRandom()
     {
+        Vector3 min = GameManager.SharedInstance.minBoundaries;
+        Vector3 max = GameManager.SharedInstance.maxBoundaries;
+        if (transform.position.x <= min.x ||
+            transform.position.y <= min.y ||
+            transform.position.x >= max.x ||
+            transform.position.y >= max.y)
+        {
+            transform.gameObject.SetActive(false);
+            spawnOwner.currentlyActive--;
+            return;
+        }
         if (!isMoving)
         {
             isMoving = true;

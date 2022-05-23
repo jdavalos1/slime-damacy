@@ -8,15 +8,21 @@ public class EnemyRun : Enemy
     // Update is called once per frame
     void Update()
     {
-        if (!GameManager.SharedInstance.isGameOver && Vector3.Distance(player.position, transform.position) <= distThreshhold)
+        if (!GameManager.SharedInstance.isGameOver)
         {
-            RunFromPlayer();
+            if (Vector3.Distance(player.position, transform.position) <= distThreshhold)
+            {
+                RunFromPlayer();
+            }
+            else
+            {
+                MoveRandom();
+            }
         }
         else
         {
-            MoveRandom();
+            gameObject.SetActive(false);
         }
- 
     }
 
     /// <summary>

@@ -7,13 +7,20 @@ public class EnemyFollow : Enemy
     // Update is called once per frame
     void Update()
     {
-        if (!GameManager.SharedInstance.isGameOver && Vector3.Distance(player.position, transform.position) <= distThreshhold)
+        if (!GameManager.SharedInstance.isGameOver)
         {
-            FollowPlayer();
+            if (Vector3.Distance(player.position, transform.position) <= distThreshhold)
+            {
+                FollowPlayer();
+            }
+            else
+            {
+                MoveRandom();
+            }
         }
         else
         {
-            MoveRandom();
+            gameObject.SetActive(false);
         }
     }
     
