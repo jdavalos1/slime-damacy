@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public int startValue = 0;
     public static GameManager SharedInstance;
     public bool isGameOver;
     private AudioManager audioManager;
+
+    public Vector2 minBoundaries;
+    public Vector2 maxBoundaries;
 
     [SerializeField]
     private Transform player;
@@ -17,7 +19,6 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         if(SharedInstance == null) SharedInstance = this;
-        DontDestroyOnLoad(this);
         isGameOver = false;
     }
     // Start is called before the first frame update
@@ -34,7 +35,7 @@ public class GameManager : MonoBehaviour
     {
         if (player.lossyScale.x >= maxPlayerSize && player.lossyScale.y >= maxPlayerSize)
         {
-            isGameOver = true;
+
             UIManager.SharedInstance.TransitionToGameWin();
         }
     }

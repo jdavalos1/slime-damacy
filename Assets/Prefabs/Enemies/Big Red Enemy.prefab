@@ -165,11 +165,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyForce: {x: 5, y: 5}
   maxDistMove: {x: 5, y: 5}
-  distThreshhold: 5
-  enemyMoveSpeed: 3
+  distThreshhold: 3
   movementTime: 3
   pauseDuration: 2
   XThreshhold: 0.2
+  enemyMoveSpeed: 3
   spawnOwner: {fileID: 0}
 --- !u!50 &-7240668436669587484
 Rigidbody2D:

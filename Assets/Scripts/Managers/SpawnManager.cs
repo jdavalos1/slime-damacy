@@ -6,6 +6,8 @@ public class SpawnManager : MonoBehaviour
 {
     public int currentlyActive;
 
+    [SerializeField]
+    private Vector2 boundaries;
     /// <summary>
     /// Objects to pool
     /// </summary>
@@ -60,7 +62,7 @@ public class SpawnManager : MonoBehaviour
         {
             temp = Instantiate(spawnObject);
             temp.SetActive(false);
-            temp.GetComponent<EnemyFollow>().spawnOwner = this;
+            temp.GetComponent<Enemy>().spawnOwner = this;
             spawnObjects.Add(temp);
         }
 
