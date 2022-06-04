@@ -185,7 +185,7 @@ public class Enemy : MonoBehaviour
     public void RemoveSpawn()
     {
         transform.gameObject.SetActive(false);
-        spawnOwner.currentlyActive--;
+        if(spawnOwner != null) spawnOwner.currentlyActive--;
     }
 
     public void OnCollisionEnter2D(Collision2D collision)

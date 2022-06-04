@@ -43,7 +43,7 @@ public class EnemyRun : Enemy
                                         -enemyMoveSpeed * Time.deltaTime);
         transform.position = new Vector3(moveTowards.x,
                                          moveTowards.y,
-                                         player.position.x);
+                                         player.position.z);
         SetAnimation(-(player.position - transform.position).normalized);
     }
 }

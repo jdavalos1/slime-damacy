@@ -45,10 +45,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentlyActive: 0
+  boundaries: {x: 0, y: 0}
   maxPooled: 2
   summonDistThreshhold: 15
-  spawnObject: {fileID: 8752880195621293348, guid: 239ad8d01eb73f24bb209b67922d5e40, type: 3}
+  spawnObject: {fileID: 3486571095020887260, guid: 20c04b024a0c511468e2fbbe543a4298, type: 3}
   player: {fileID: 0}
   maxSpawn: 1
   spawnLimits: {x: 0, y: 0}
-  spawnScale: {x: -0.1, y: -0.1, z: 0}
+  spawnScale: {x: -0.05, y: -0.05, z: 0}

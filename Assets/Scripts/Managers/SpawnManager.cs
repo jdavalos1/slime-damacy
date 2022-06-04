@@ -110,6 +110,6 @@ public class SpawnManager : MonoBehaviour
     {
         return new Vector3(Random.Range(-spawnLimits.x, spawnLimits.x),
                            Random.Range(-spawnLimits.y, spawnLimits.y),
-                           -0.1f);
+                           0.0f);
     }
 }
