@@ -21,6 +21,11 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        Play(Constants.BGM, true);
+    }
+
     /// <summary>
     /// Change the volume of a predetermined value. If name is empty or null then
     /// it will default to all volume
@@ -43,6 +48,7 @@ public class AudioManager : MonoBehaviour
     {
         Sound s = sounds.Find(s => s.name == sound);
         if (s == null) return;
+        if (s.source.isPlaying) return;
         s.source.loop = loop;
         s.source.Play();
     }
